@@ -1,0 +1,139 @@
+﻿<ContentDialog
+    x:Class="快迅通.Dialogs.PhotoSelect"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:快迅通.Dialogs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="选择头像"
+    PrimaryButtonText="确定"
+    SecondaryButtonText="取消"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+    Width="500">
+
+    <Grid Width="450">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="当前头像：" FontSize="15px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Image x:Name="SelectedPhotoBox" Grid.Column="1" Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        </Grid>
+        <GridView x:Name="PhotoGridView" Grid.Row="2" SelectionChanged="PhotoGridView_SelectionChanged" SelectionMode="Single" BorderThickness="1,1,1,1" BorderBrush="LightGray" CornerRadius="5,5,5,5">
+            <Image Source="/Assets/action-item-login.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50001.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50002.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50003.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50004.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50005.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50006.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50007.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50008.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50009.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50010.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50011.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50012.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50013.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50014.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50015.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50016.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50017.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50018.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50019.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50020.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50021.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50022.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50023.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50024.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50025.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50026.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50027.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50028.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50029.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50030.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50031.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50032.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50033.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50034.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50035.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50036.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50037.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50038.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50039.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50040.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50041.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50042.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50043.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50044.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50045.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50046.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50047.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50048.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50049.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50050.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50051.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50052.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50053.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50054.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50055.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50056.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50057.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50058.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50059.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50060.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50061.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50062.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50063.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50064.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50065.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50066.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50067.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50068.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50069.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50070.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50071.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50072.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50073.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50074.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50075.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50076.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50077.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50078.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50079.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50080.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50081.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50082.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50083.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50084.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50085.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50086.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50087.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50088.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50089.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50090.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50091.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50092.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50093.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50094.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50095.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50096.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50097.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50098.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50099.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50100.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50101.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50102.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50103.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50104.png" Width="30" Height="30"/>
+            <Image Source="/ICONS/Photo/50105.png" Width="30" Height="30"/>
+        </GridView>
+    </Grid>
+</ContentDialog>

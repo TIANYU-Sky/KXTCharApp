@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="快迅通.Views.CommunitySubViews.GroupsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:快迅通.Views.CommunitySubViews"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:magnets="using:快迅通.Controls.Magnets"
+    xmlns:utils="using:快迅通.Utils"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="TemporaryGroupItems" x:DataType="utils:TemporaryGroupsList">
+            <Grid x:Name="GroupMagnetGrid" CornerRadius="10,10,10,10" Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Width="70" Height="70" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/ICONS/group_icon.png"/>
+                    </Grid.Background>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="0.25*"/>
+                        <RowDefinition Height="0.25*"/>
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="GroupNameBox" Text="{x:Bind Name}" Grid.Row="1" FontSize="35px" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,5"/>
+                    <TextBlock x:Name="GroupIDBox" Text="{x:Bind ID}" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,5"/>
+                    <TextBlock x:Name="GroupDescribeBox" Text="{x:Bind Describe}" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,5"/>
+                </Grid>
+                <Grid x:Name="GroupMessageCountGrid" Visibility="{x:Bind MessageState}"  Grid.Column="2"  Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" CornerRadius="15,15,15,15">
+                    <TextBlock x:Name="GroupMessageCountBox" Text="{x:Bind MessageCount}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,3" FontSize="13px"/>
+                </Grid>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="5" MaxWidth="15"/>
+            <ColumnDefinition/>
+            <ColumnDefinition MinWidth="5" MaxWidth="15"/>
+        </Grid.ColumnDefinitions>
+        <!--<ScrollViewer Grid.Column="1">
+            <VariableSizedWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="6" HorizontalAlignment="Center" ItemWidth="300">
+            </VariableSizedWrapGrid>
+        </ScrollViewer>-->
+        <GridView x:Name="GroupGridView" Grid.Column="1"/>
+    </Grid>
+</Page>

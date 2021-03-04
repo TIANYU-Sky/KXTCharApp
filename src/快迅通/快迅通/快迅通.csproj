@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{26D3A7B4-F4F8-467F-A4B8-03979836C8F8}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>快迅通</RootNamespace>
+    <AssemblyName>快迅通</AssemblyName>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Magnets\AddFriendGroupMagnets.xaml.cs">
+      <DependentUpon>AddFriendGroupMagnets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Magnets\FriendMagnets.xaml.cs">
+      <DependentUpon>FriendMagnets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Magnets\FriendMessageMagnets.xaml.cs">
+      <DependentUpon>FriendMessageMagnets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Magnets\GroupMagnets.xaml.cs">
+      <DependentUpon>GroupMagnets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Magnets\GroupMessageMagnets.xaml.cs">
+      <DependentUpon>GroupMessageMagnets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Magnets\SettingMagnets.xaml.cs">
+      <DependentUpon>SettingMagnets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Magnets\ThemeMagnets.xaml.cs">
+      <DependentUpon>ThemeMagnets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Magnets\UserAccountMagnets.xaml.cs">
+      <DependentUpon>UserAccountMagnets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Magnets\UserMessageMagnets.xaml.cs">
+      <DependentUpon>UserMessageMagnets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NotifyTip.xaml.cs">
+      <DependentUpon>NotifyTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TurnBackControl.xaml.cs">
+      <DependentUpon>TurnBackControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AddFriendAndGroup.xaml.cs">
+      <DependentUpon>AddFriendAndGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AddNewAccount.xaml.cs">
+      <DependentUpon>AddNewAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CloudNewFolder.xaml.cs">
+      <DependentUpon>CloudNewFolder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ForgetPassword.xaml.cs">
+      <DependentUpon>ForgetPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FriendDetailInfo.xaml.cs">
+      <DependentUpon>FriendDetailInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\GroupChatRecorder.xaml.cs">
+      <DependentUpon>GroupChatRecorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\GroupDetailInfo.xaml.cs">
+      <DependentUpon>GroupDetailInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PhotoSelect.xaml.cs">
+      <DependentUpon>PhotoSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RegisterNewAccount.xaml.cs">
+      <DependentUpon>RegisterNewAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UpdateEmail.xaml.cs">
+      <DependentUpon>UpdateEmail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UserChatRecorder.xaml.cs">
+      <DependentUpon>UserChatRecorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\ClientConnect.cs" />
+    <Compile Include="Server\FileService\Bitmap.cs" />
+    <Compile Include="Server\FileService\FileService.cs" />
+    <Compile Include="Server\FileService\StreamOperation.cs" />
+    <Compile Include="Utils\Enums.cs" />
+    <Compile Include="Utils\Interfaces.cs" />
+    <Compile Include="Utils\LocalDB.cs" />
+    <Compile Include="Utils\RunningDatas.cs" />
+    <Compile Include="Utils\StaticDatas.cs" />
+    <Compile Include="Utils\TemplateDataStruct.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Views\CloudFilePage.xaml.cs">
+      <DependentUpon>CloudFilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CloudSubViews\CloudPage.xaml.cs">
+      <DependentUpon>CloudPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CloudSubViews\TransPage.xaml.cs">
+      <DependentUpon>TransPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CommunityPage.xaml.cs">
+      <DependentUpon>CommunityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CommunitySubViews\FriendCommunityPage.xaml.cs">
+      <DependentUpon>FriendCommunityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CommunitySubViews\FriendsPage.xaml.cs">
+      <DependentUpon>FriendsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CommunitySubViews\GroupCommunityPage.xaml.cs">
+      <DependentUpon>GroupCommunityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CommunitySubViews\GroupsPage.xaml.cs">
+      <DependentUpon>GroupsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingSubViews\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingSubViews\AccountManagePage.xaml.cs">
+      <DependentUpon>AccountManagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingSubViews\ThemePage.xaml.cs">
+      <DependentUpon>ThemePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingSubViews\UserInformationPage.xaml.cs">
+      <DependentUpon>UserInformationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingSubViews\UserInformationUpdate.xaml.cs">
+      <DependentUpon>UserInformationUpdate.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\action-item-login.png" />
+    <Content Include="Assets\file-generic-32~dark~sel%402x.png" />
+    <Content Include="Assets\file-generic-32~sel%402x.png" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\setting_userinfor.png" />
+    <Content Include="Assets\ghost_110_social_0304.png" />
+    <Content Include="Assets\setting_account.png" />
+    <Content Include="Assets\logo.scale-400.png" />
+    <Content Include="Assets\setting_theme.png" />
+    <Content Include="Assets\setting_about.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\左向箭头.png" />
+    <Content Include="Icons\add_icon.png" />
+    <Content Include="Icons\art-label.png" />
+    <Content Include="Icons\add_2_icon.png" />
+    <Content Include="Icons\add_3_icon.png" />
+    <Content Include="Icons\Files\AEFilesLogo.png" />
+    <Content Include="Icons\Files\AIFilesLogo.png" />
+    <Content Include="Icons\Files\CodeFileLogo.png" />
+    <Content Include="Icons\Files\CSFileLogo.png" />
+    <Content Include="Icons\Files\CSSFileLogo.png" />
+    <Content Include="Icons\Files\C_CppFileLogo.png" />
+    <Content Include="Icons\Files\ExcelFileLogo.png" />
+    <Content Include="Icons\Files\FolderLogo.png" />
+    <Content Include="Icons\Files\FolderLogo3.png" />
+    <Content Include="Icons\Files\FileLogo.png" />
+    <Content Include="Icons\Files\IDFilesLogo.png" />
+    <Content Include="Icons\Files\json.png" />
+    <Content Include="Icons\Files\MusicFileLogo2.png" />
+    <Content Include="Icons\Files\PictureFileLogo2.png" />
+    <Content Include="Icons\Files\PPTFileLogo.png" />
+    <Content Include="Icons\Files\PrFilesLogo.png" />
+    <Content Include="Icons\Files\PSFilesLogo.png" />
+    <Content Include="Icons\Files\VideoFileLogo2.png" />
+    <Content Include="Icons\Files\VisioFileLogo.png" />
+    <Content Include="Icons\Files\WordFileLogo.png" />
+    <Content Include="Icons\Files\XdFilesLogo.png" />
+    <Content Include="Icons\friends_icon.png" />
+    <Content Include="Icons\cloud_icon.png" />
+    <Content Include="Icons\group_icon.png" />
+    <Content Include="Icons\Photo\50001.png" />
+    <Content Include="Icons\Photo\50002.png" />
+    <Content Include="Icons\Photo\50003.png" />
+    <Content Include="Icons\Photo\50004.png" />
+    <Content Include="Icons\Photo\50005.png" />
+    <Content Include="Icons\Photo\50006.png" />
+    <Content Include="Icons\Photo\50007.png" />
+    <Content Include="Icons\Photo\50008.png" />
+    <Content Include="Icons\Photo\50009.png" />
+    <Content Include="Icons\Photo\50010.png" />
+    <Content Include="Icons\Photo\50011.png" />
+    <Content Include="Icons\Photo\50012.png" />
+    <Content Include="Icons\Photo\50013.png" />
+    <Content Include="Icons\Photo\50014.png" />
+    <Content Include="Icons\Photo\50015.png" />
+    <Content Include="Icons\Photo\50016.png" />
+    <Content Include="Icons\Photo\50017.png" />
+    <Content Include="Icons\Photo\50018.png" />
+    <Content Include="Icons\Photo\50019.png" />
+    <Content Include="Icons\Photo\50020.png" />
+    <Content Include="Icons\Photo\50021.png" />
+    <Content Include="Icons\Photo\50022.png" />
+    <Content Include="Icons\Photo\50023.png" />
+    <Content Include="Icons\Photo\50024.png" />
+    <Content Include="Icons\Photo\50025.png" />
+    <Content Include="Icons\Photo\50026.png" />
+    <Content Include="Icons\Photo\50027.png" />
+    <Content Include="Icons\Photo\50028.png" />
+    <Content Include="Icons\Photo\50029.png" />
+    <Content Include="Icons\Photo\50030.png" />
+    <Content Include="Icons\Photo\50031.png" />
+    <Content Include="Icons\Photo\50032.png" />
+    <Content Include="Icons\Photo\50033.png" />
+    <Content Include="Icons\Photo\50034.png" />
+    <Content Include="Icons\Photo\50035.png" />
+    <Content Include="Icons\Photo\50036.png" />
+    <Content Include="Icons\Photo\50037.png" />
+    <Content Include="Icons\Photo\50038.png" />
+    <Content Include="Icons\Photo\50039.png" />
+    <Content Include="Icons\Photo\50040.png" />
+    <Content Include="Icons\Photo\50041.png" />
+    <Content Include="Icons\Photo\50042.png" />
+    <Content Include="Icons\Photo\50043.png" />
+    <Content Include="Icons\Photo\50044.png" />
+    <Content Include="Icons\Photo\50045.png" />
+    <Content Include="Icons\Photo\50046.png" />
+    <Content Include="Icons\Photo\50047.png" />
+    <Content Include="Icons\Photo\50048.png" />
+    <Content Include="Icons\Photo\50049.png" />
+    <Content Include="Icons\Photo\50050.png" />
+    <Content Include="Icons\Photo\50051.png" />
+    <Content Include="Icons\Photo\50052.png" />
+    <Content Include="Icons\Photo\50053.png" />
+    <Content Include="Icons\Photo\50054.png" />
+    <Content Include="Icons\Photo\50055.png" />
+    <Content Include="Icons\Photo\50056.png" />
+    <Content Include="Icons\Photo\50057.png" />
+    <Content Include="Icons\Photo\50058.png" />
+    <Content Include="Icons\Photo\50059.png" />
+    <Content Include="Icons\Photo\50060.png" />
+    <Content Include="Icons\Photo\50061.png" />
+    <Content Include="Icons\Photo\50062.png" />
+    <Content Include="Icons\Photo\50063.png" />
+    <Content Include="Icons\Photo\50064.png" />
+    <Content Include="Icons\Photo\50065.png" />
+    <Content Include="Icons\Photo\50066.png" />
+    <Content Include="Icons\Photo\50067.png" />
+    <Content Include="Icons\Photo\50068.png" />
+    <Content Include="Icons\Photo\50069.png" />
+    <Content Include="Icons\Photo\50070.png" />
+    <Content Include="Icons\Photo\50071.png" />
+    <Content Include="Icons\Photo\50072.png" />
+    <Content Include="Icons\Photo\50073.png" />
+    <Content Include="Icons\Photo\50074.png" />
+    <Content Include="Icons\Photo\50075.png" />
+    <Content Include="Icons\Photo\50076.png" />
+    <Content Include="Icons\Photo\50077.png" />
+    <Content Include="Icons\Photo\50078.png" />
+    <Content Include="Icons\Photo\50079.png" />
+    <Content Include="Icons\Photo\50080.png" />
+    <Content Include="Icons\Photo\50081.png" />
+    <Content Include="Icons\Photo\50082.png" />
+    <Content Include="Icons\Photo\50083.png" />
+    <Content Include="Icons\Photo\50084.png" />
+    <Content Include="Icons\Photo\50085.png" />
+    <Content Include="Icons\Photo\50086.png" />
+    <Content Include="Icons\Photo\50087.png" />
+    <Content Include="Icons\Photo\50088.png" />
+    <Content Include="Icons\Photo\50089.png" />
+    <Content Include="Icons\Photo\50090.png" />
+    <Content Include="Icons\Photo\50091.png" />
+    <Content Include="Icons\Photo\50092.png" />
+    <Content Include="Icons\Photo\50093.png" />
+    <Content Include="Icons\Photo\50094.png" />
+    <Content Include="Icons\Photo\50095.png" />
+    <Content Include="Icons\Photo\50096.png" />
+    <Content Include="Icons\Photo\50097.png" />
+    <Content Include="Icons\Photo\50098.png" />
+    <Content Include="Icons\Photo\50099.png" />
+    <Content Include="Icons\Photo\50100.png" />
+    <Content Include="Icons\Photo\50101.png" />
+    <Content Include="Icons\Photo\50102.png" />
+    <Content Include="Icons\Photo\50103.png" />
+    <Content Include="Icons\Photo\50104.png" />
+    <Content Include="Icons\Photo\50105.png" />
+    <Content Include="Icons\uplist_icon.png" />
+    <Content Include="Icons\next_2_icon.png" />
+    <Content Include="Icons\next_icon.png" />
+    <Content Include="Icons\picture_icon.png" />
+    <Content Include="Icons\downlist_icon.png" />
+    <Content Include="Icons\selected_2_icon.png" />
+    <Content Include="Icons\selected_icon.png" />
+    <Content Include="Icons\online_icon.png" />
+    <Content Include="Icons\frush_icon.png" />
+    <Content Include="Icons\turnback_icon.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\Magnets\AddFriendGroupMagnets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Magnets\FriendMagnets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Magnets\FriendMessageMagnets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Magnets\GroupMagnets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Magnets\GroupMessageMagnets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Magnets\SettingMagnets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Magnets\ThemeMagnets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Magnets\UserAccountMagnets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Magnets\UserMessageMagnets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NotifyTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TurnBackControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\AddFriendAndGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\AddNewAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\CloudNewFolder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\ForgetPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\FriendDetailInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\GroupChatRecorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\GroupDetailInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\PhotoSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\RegisterNewAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\UpdateEmail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\UserChatRecorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CloudFilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CloudSubViews\CloudPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CloudSubViews\TransPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CommunityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CommunitySubViews\FriendCommunityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CommunitySubViews\FriendsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CommunitySubViews\GroupCommunityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CommunitySubViews\GroupsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingSubViews\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingSubViews\AccountManagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingSubViews\ThemePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingSubViews\UserInformationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingSubViews\UserInformationUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.3.200213001</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="IKXTServer">
+      <HintPath>..\..\IKXTServer\IKXTServer\bin\Debug\netstandard2.0\IKXTServer.dll</HintPath>
+    </Reference>
+    <Reference Include="KXTNetStruct, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KXTNetStruct\KXTNetStruct\bin\Debug\netstandard2.0\KXTNetStruct.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

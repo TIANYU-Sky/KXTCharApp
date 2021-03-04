@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="快迅通.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:快迅通"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:快迅通.Views"
+    xmlns:communitysubviews="using:快迅通.Views.CommunitySubViews"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationForegroundThemeBrush}">
+
+    <Grid x:Name="MainPageGrid">
+        <Grid x:Name="LoginGrid" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="UserNameBox" Grid.Row="1" Background="White" BorderThickness="0,0,0,0" Foreground="{x:Null}" Margin="0,0,0,0" CornerRadius="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" FocusVisualSecondaryBrush="{x:Null}" BorderBrush="{x:Null}" SelectionHighlightColor="{x:Null}" RequestedTheme="Light"/>
+            <PasswordBox x:Name="PassWordBox" Grid.Row="1" Background="White" BorderThickness="0,1,0,0" Foreground="{x:Null}" Margin="0,32,0,0" CornerRadius="0,0,5,5" VerticalAlignment="Top" Width="280" FocusVisualSecondaryBrush="{x:Null}" SelectionHighlightColor="#00BFBFBF" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="{x:Null}" RequestedTheme="Light"/>
+            <Grid Tapped="LoginButton_Tapped" x:Name="LoginButton" Grid.Row="1" Height="60" Width="60" Margin="400,0,0,0" VerticalAlignment="Top">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Assets/左向箭头.png"/>
+                </Grid.Background>
+            </Grid>
+            <ProgressRing x:Name="LoginProgressRing" Grid.Row="1" Visibility="Collapsed" Height="60" Width="60" Margin="400,0,0,0" VerticalAlignment="Top" Foreground="White"/>
+            <TextBlock x:Name="ForgetPWButton" Tapped="ForgetPWButton_Tapped" HorizontalAlignment="Center" Grid.Row="3" Foreground="White" Text="忘记密码" Margin="-100,0,0,0"/>
+            <TextBlock x:Name="NewUserButton" Tapped="NewUserButton_Tapped" HorizontalAlignment="Center" Grid.Row="3" Foreground="White" Text="新用户" Margin="100,0,0,0"/>
+        </Grid>
+        <Grid x:Name="UserGrid" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.05*" MinWidth="45" MaxWidth="50"/>
+                <ColumnDefinition Width="0.95*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="SelectionColumn" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*" MaxHeight="20" MinHeight="10"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition MinHeight="10" MaxHeight="30"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="UserButton" Grid.Row="1" Height="50" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}">
+                    <Image x:Name="UserButtonPhoto" Source="/Assets/action-item-login.png"/>
+                    <Button.Flyout>
+                        <MenuFlyout Placement="Bottom">
+                            <MenuFlyoutItem x:Name="MyDetailInfo" Text="我的资料" Click="MyDetailInfo_Click"/>
+                            <MenuFlyoutSeparator/>
+                            <MenuFlyoutItem x:Name="MyRemaind" Text="我的提醒" Click="MyRemaind_Click"/>
+                        </MenuFlyout>
+                    </Button.Flyout>
+                </Button>
+                <Grid x:Name="CommunityButton" Tapped="CommunityButton_Tapped" Grid.Row="1" Height="40" Width="40" VerticalAlignment="Top" Margin="0,50,0,0">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/Assets/ghost_110_social_0304.png"/>
+                    </Grid.Background>
+                </Grid>
+                <Grid x:Name="CloudFileButton" Tapped="CloudFileButton_Tapped" Grid.Row="1" Height="40" Width="40" VerticalAlignment="Top" Margin="0,100,0,0">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/Assets/file-generic-32~sel@2x.png"/>
+                    </Grid.Background>
+                </Grid>
+                <Grid x:Name="SettingButton" Tapped="SettingButton_Tapped" Grid.Row="3" Height="40" Width="40" VerticalAlignment="Bottom">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/Assets/logo.scale-400.png"/>
+                    </Grid.Background>
+                </Grid>
+            </Grid>
+            <Grid x:Name="SecondGrid" Grid.Column="1">
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
